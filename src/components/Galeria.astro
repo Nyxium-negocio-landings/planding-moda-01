@@ -1,0 +1,18 @@
+<section id="galeria" class="section gallery">
+  <h2 class="fade-up">Galería</h2>
+
+  <div class="gallery-grid">
+    {Array.from({ length: 6 }).map((_, i) => (
+      <div class="gallery-item fade-up">
+        <img
+          src={`https://picsum.photos/500/600?random=${i}`}
+          loading="lazy"
+          alt="Moda"
+        />
+        <div class="overlay">
+          <span>Ver más</span>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
