@@ -1,31 +1,46 @@
-🚀 Proyecto Landing Page Moda con Astro
+# 🚀 Landing Page de Moda con Astro
 
-Este proyecto es una landing page profesional para el nicho de moda, desarrollada con Astro, enfocada en alto rendimiento, diseño moderno y experiencia de usuario premium.
+Este proyecto es una **Landing Page moderna para el nicho de moda**, desarrollada utilizando **Astro** para lograr alto rendimiento, SEO optimizado y una arquitectura basada en componentes reutilizables.
 
-🧠 Tecnologías utilizadas
-Astro → Framework principal (renderizado estático ultra rápido)
-HTML5 + CSS3 → Estructura y estilos personalizados
-JavaScript Vanilla → Interacciones ligeras (sin librerías pesadas)
-Arquitectura de componentes (.astro) → Reutilización y organización limpia
-📁 Estructura del proyecto
+La landing está pensada para marcas de moda, boutiques, diseñadores o tiendas online que necesiten una página rápida, elegante y profesional.
+
+---
+
+# 🧠 Tecnologías Utilizadas
+
+Este proyecto utiliza las siguientes tecnologías:
+
+- **Astro** → Framework principal para generación de sitios rápidos.
+- **HTML5** → Estructura del contenido.
+- **CSS3** → Estilos personalizados y diseño responsive.
+- **JavaScript Vanilla** → Interacciones ligeras sin librerías pesadas.
+- **Componentes `.astro`** → Arquitectura modular reutilizable.
+
+---
+
+# 📁 Estructura del Proyecto
+
+```text
 /
-├── public/                  # Recursos estáticos (imágenes, íconos, etc.)
+├── public/                  
+│   └── images/              # Imágenes, logos y recursos estáticos
 │
 ├── src/
 │   ├── components/          # Componentes reutilizables
-│   │   ├── Testimonials.astro
-│   │   ├── FAQ.astro
 │   │   ├── Navbar.astro
 │   │   ├── Hero.astro
 │   │   ├── Services.astro
 │   │   ├── Gallery.astro
+│   │   ├── Testimonials.astro
+│   │   ├── FAQ.astro
 │   │   └── Contact.astro
 │   │
-│   ├── styles/              # Estilos globales o modularizados
-│   │   └── global.css
+│   ├── styles/              
+│   │   └── global.css       # Estilos globales del proyecto
 │   │
 │   └── pages/
-│       └── index.astro      # Página principal (landing)
+│       └── index.astro      # Página principal
 │
+├── astro.config.mjs
 ├── package.json
-└── astro.config.mjs
+└── README.md
