@@ -1,0 +1,44 @@
+---
+const testimonials = [
+  {
+    name: "Valeria Gómez",
+    role: "Fashion Influencer",
+    image: "https://i.pravatar.cc/150?img=32",
+    text: "La calidad de las prendas es increíble. Me encanta cómo cada pieza resalta mi estilo personal."
+  },
+  {
+    name: "Camila Torres",
+    role: "Cliente frecuente",
+    image: "https://i.pravatar.cc/150?img=45",
+    text: "Siempre encuentro outfits únicos. El servicio y la atención son de primera."
+  },
+  {
+    name: "Lucía Fernández",
+    role: "Estilista",
+    image: "https://i.pravatar.cc/150?img=12",
+    text: "Recomiendo esta marca a todos mis clientes. Es tendencia, elegancia y comodidad."
+  }
+];
+---
+
+<section class="testimonials">
+  <div class="container">
+    <h2 class="title">Lo que dicen nuestras clientes</h2>
+
+    <div class="grid">
+      {testimonials.map((item) => (
+        <div class="card">
+          <p class="text">“{item.text}”</p>
+
+          <div class="user">
+            <img src={item.image} alt={item.name} />
+            <div>
+              <h4>{item.name}</h4>
+              <span>{item.role}</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

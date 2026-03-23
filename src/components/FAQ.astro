@@ -1,0 +1,59 @@
+---
+const faqs = [
+  {
+    question: "¿Cómo puedo elegir mi talla correctamente?",
+    answer: "Nuestra guía de tallas está diseñada para adaptarse a diferentes siluetas. Te recomendamos revisarla antes de comprar o contactarnos para asesoría personalizada."
+  },
+  {
+    question: "¿Realizan envíos a todo el país?",
+    answer: "Sí, realizamos envíos a nivel nacional con tiempos de entrega rápidos y seguimiento en tiempo real."
+  },
+  {
+    question: "¿Puedo hacer cambios o devoluciones?",
+    answer: "Aceptamos cambios dentro de los primeros 7 días después de recibir tu pedido, siempre que la prenda esté en perfectas condiciones."
+  },
+  {
+    question: "¿Las prendas son edición limitada?",
+    answer: "Sí, muchas de nuestras colecciones son exclusivas y de edición limitada para garantizar autenticidad y estilo único."
+  }
+];
+---
+
+<section class="faq">
+  <div class="container">
+    <h2 class="title">Preguntas Frecuentes</h2>
+
+    <div class="faq-list">
+      {faqs.map((item, index) => (
+        <div class="faq-item" data-index={index}>
+          <button class="faq-question">
+            {item.question}
+            <span class="icon">+</span>
+          </button>
+
+          <div class="faq-answer">
+            <p>{item.answer}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  const items = document.querySelectorAll(".faq-item");
+
+  items.forEach((item) => {
+    const btn = item.querySelector(".faq-question");
+
+    btn.addEventListener("click", () => {
+      const active = document.querySelector(".faq-item.active");
+
+      if (active && active !== item) {
+        active.classList.remove("active");
+      }
+
+      item.classList.toggle("active");
+    });
+  });
+</script>
